@@ -1,6 +1,7 @@
-# Getting Started with Create React App
+# Open Bridge UI Component Implementaion in React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+To install dependencies
+### `yarn install`
 
 ## Available Scripts
 
