@@ -1,5 +1,5 @@
 import "./Navbar.css";
-import { ReactComponent as BellIcon } from "./icons/bell.svg";
+import { ReactComponent as AlartIcon } from "./icons/alart.svg";
 import { ReactComponent as MessengerIcon } from "./icons/messenger.svg";
 import { ReactComponent as CaretIcon } from "./icons/caret.svg";
 import { ReactComponent as PlusIcon } from "./icons/plus.svg";
@@ -14,21 +14,20 @@ import { CSSTransition } from "react-transition-group";
 function NavbarComp() {
   return (
     <Navbar>
-      <NavItem icon={<PlusIcon />} />
-      <NavItem icon={<BellIcon />} />
-      <NavItem icon={<MessengerIcon />} />
+      {/* <NavItem icon={<PlusIcon />} />s */}
+      <NavItem icon={<AlartIcon />} />
+      {/* <NavItem icon={<MessengerIcon />} />
 
       <NavItem icon={<CaretIcon />}>
         <DropdownMenu></DropdownMenu>
-      </NavItem>
+      </NavItem> */}
     </Navbar>
   );
 }
 
 function Navbar(props) {
   return (
-    // <nav className="navbar">
-    <nav className="ob-nav-top-bar">
+    <nav className="navbar">
       <ul className="navbar-nav">{props.children}</ul>
     </nav>
   );

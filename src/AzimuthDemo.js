@@ -1,5 +1,4 @@
 import "openbridge-web-components";
-import "openbridge-css/dist/css/openbridge.css";
 import * as React from "react";
 import { fromEvent, interval, Subscription } from "rxjs";
 import { filter, timeInterval } from "rxjs/operators";
@@ -107,57 +106,55 @@ export class AzimuthDemo extends React.Component {
     };
 
     return (
-      <div>
-        <div style={{ width: 768, height: 256 }}>
-          <ob-azimuth-small
-            style={{
-              position: "absolute",
-              width: 64,
-              height: 64,
-              top: 96,
-              left: 96,
-            }}
-            {...args}
-          />
-          <ob-azimuth-medium
-            style={{
-              position: "absolute",
-              width: 256,
-              height: 256,
-              top: 256,
-              left: 0,
-            }}
-            {...args}
-          />
-          <ob-azimuth-large
+      <div className="ob-container-background-color-fill">
+        <ob-azimuth-small
+          style={{
+            position: "absolute",
+            width: 64,
+            height: 64,
+            top: 96,
+            left: 96,
+          }}
+          {...args}
+        />
+        <ob-azimuth-medium
+          style={{
+            position: "absolute",
+            width: 256,
+            height: 256,
+            top: 256,
+            left: 0,
+          }}
+          {...args}
+        />
+        <ob-azimuth-large
+          style={{
+            position: "absolute",
+            width: 512,
+            height: 512,
+            top: 50,
+            left: 257,
+          }}
+          {...args}
+        />
+
+        <div style={{ width: 256, height: 256 }}>
+          <ob-pitch-roll-medium
             style={{
               position: "absolute",
               width: 512,
               height: 512,
-              top: 50,
+              top: 420,
               left: 257,
             }}
-            {...args}
+            lowerPitch={-2}
+            lowerRoll={-2}
+            pitch={2}
+            roll={2}
+            scale={5}
+            upperPitch={3}
+            upperRoll={3}
           />
-
-          <div style={{ width: 256, height: 256 }}>
-            <ob-pitch-roll-medium
-              style={{
-                position: "absolute",
-                width: 512,
-                height: 512,
-                top: 420,
-                left: 257,
-              }}
-              lowerPitch={-2}
-              lowerRoll={-2}
-              pitch={2}
-              roll={2}
-              scale={5}
-              upperPitch={3}
-              upperRoll={3}
-            />
-          </div>
         </div>
       </div>
     );

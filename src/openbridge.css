@@ -2102,12 +2102,14 @@ html {
   display: flex;
   align-items: center;
   cursor: pointer;
+  transition: filter 300ms;
 }
 
 .ob-nav-top-bar .ob-menu-container .ob-nav-btn:hover:not(:disabled):not(.ob-disabled) {
   z-index: 1;
   background-color: var(--flat-hover-background-color);
   border-width: 0;
+  filter: brightness(1.2);
 }
 
 .ob-nav-top-bar .ob-menu-container .ob-nav-btn:focus {
